@@ -46,6 +46,15 @@ public class Armour extends Equippable {
 
         this.durability = src.durability;
         // Copt the remaining fields (data members)
+        this.material = src.getMaterial();
+        this.modifier = src.getModifier();
+        this.modifierLevel = src.modifierLevel;
+        this.element = src.getElement();
+        this.defense = src.defense;
+        this.name = src.getName();
+        this.stackable = src.stackable;
+
+
     }
 
     /**

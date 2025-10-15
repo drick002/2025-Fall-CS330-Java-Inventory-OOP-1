@@ -52,6 +52,9 @@ public class Consumable extends Item {
         super(src.name, true);
 
         // Copy src.effect and src.uses
+        this.effect = src.effect;
+        this.uses = src.uses;
+        
     }
 
     /**
