@@ -84,8 +84,15 @@ public class Armour extends Equippable {
     public void read(Scanner snr)
     {
         super.name = snr.next();
-
+        
         // Use snr.next() and snr.nextInt() to read in values remaining fields
+        super.material = snr.next();
+        super.durability = snr.nextInt();
+        defense = snr.nextInt();
+        super.modifier = snr.next();
+        super.modifierLevel = snr.nextInt();
+        super.element = snr.next();
+
 
     }
 
@@ -110,6 +117,11 @@ public class Armour extends Equippable {
         return String.join(
             System.lineSeparator(),
             String.format("  Nme: %s", super.getName()),
+            String.format("  Dur: %d", super.getDurability()),
+            String.format("  Def: %d", getDefense()), 
+            String.format("  Mtl: %s", super.getMaterial()),
+            String.format("  Mdr: %s (Lvl %d)", super.getModifier(), super.getModifierLevel()),
+            String.format("  Emt: %s", super.getElement()),       
             ""
         );
     }
