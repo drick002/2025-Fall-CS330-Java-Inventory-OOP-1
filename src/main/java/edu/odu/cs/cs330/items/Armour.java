@@ -96,7 +96,8 @@ public class Armour extends Equippable {
     public Item clone()
     {
         // Replace the return
-        return new Armour();
+        Armour copy = new Armour(this);
+        return copy;
     }
 
     /**

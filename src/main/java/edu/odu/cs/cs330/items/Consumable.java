@@ -54,7 +54,7 @@ public class Consumable extends Item {
         // Copy src.effect and src.uses
         this.effect = src.effect;
         this.uses = src.uses;
-        
+
     }
 
     /**
@@ -114,7 +114,8 @@ public class Consumable extends Item {
     public Item clone()
     {
         // Replace the next line
-        return new Consumable();
+        Consumable copy = new Consumable(this);
+        return copy;
     }
 
     /**
