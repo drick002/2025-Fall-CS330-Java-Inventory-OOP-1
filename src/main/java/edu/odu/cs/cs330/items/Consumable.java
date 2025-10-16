@@ -105,6 +105,8 @@ public class Consumable extends Item {
     {
         super.name = snr.next();
         // Refer to the hints in Armour.read
+        effect = snr.next();
+        uses = snr.nextInt();
     }
 
     /**
@@ -124,6 +126,14 @@ public class Consumable extends Item {
     @Override
     public String toString()
     {
-        return String.format("  Use the hint in Armour.toString%n");
+         return String.join(
+            System.lineSeparator(),
+            String.format("  Nme: %s", super.getName()),
+            String.format("  Eft: %s", effect),
+            String.format("  Use: %d", uses),                  
+            ""
+        );
+        
+        //return String.format("  Use the hint in Armour.toString%n");
     }
 }
